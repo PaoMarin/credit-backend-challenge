@@ -26,8 +26,6 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-
-
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
@@ -46,15 +44,13 @@ Rails.application.configure do
 
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => "mail.google.com", ####important
-    :user_name            => ENV['gmail_username'],
-    :password             => ENV['gmail_password'],
-    :authentication       => "plain",
-    :enable_starttls_auto => true
+    address: "smtp.gmail.com",
+    port: 587,
+    domain: "mail.google.com",####important
+    authentication: "plain",
+    user_name: 'credit.challenge.app@gmail.com',
+    password: 'xcw0nhvw'
   }
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
