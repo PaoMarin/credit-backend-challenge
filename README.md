@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Api-Challenge
 
-Things you may want to cover:
+Project to calculate the installment of a micro-loan that a client wants to request and must pay monthly / biweekly
 
-* Ruby version
+The user enters the requested data. And he will return the calculation of the couta to pay for the requested loan. 
+In addition, an email is sent to an authorized user of the client's request.
 
-* System dependencies
+### Project Details:
 
-* Configuration
+* Ruby version: 2.5.0
+* Rails version: 5.0.1
 
-* Database creation
+* Verify that the cors are enabled. In config/initializers/cors. Uncomment the lines of the cors.
+* And uncomment  "gem 'rack-cors'"
+
+* And then, Run
+> bundle install
+
+* Database
+- PostgreSQL
 
 * Database initialization
+> rake db:create rake db:migrate
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Run Server
+> rvm list
+> rvm use 2.5.0@2.5.0
+> rails server
