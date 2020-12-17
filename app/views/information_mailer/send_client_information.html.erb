@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
-    <title>Credit Information</title>
-</head>
-<body>
-<p>
-  Hello Sergio, check the following information that a potential client consulted for a loan request:
-</p>
+  <head>
+      <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+      <title>Credit Information</title>
+  </head>
+  <body>
+  <p>
+    Hello Sergio, check the following information that a potential client consulted for a loan request:
+  </p>
+  <% if @client.frecuency == 1 %>
+    <% @frecuency = "monthly" %>
+  <% else %>
+    <% @frecuency = "biweekly" %>
+  <% end %>
 
-<table>
-  <thead>
-  <h2>Client data</h2>
-  <tr>
-    <th><%=@client.name%></th>
-    <th><%=@client.email%></th>
-    <th><%=@client.sector%></th>
-  </tr>
-  </thead>
-</table>
-</body>
+    <table>
+      <tbody>
+      <h2>Client data</h2>
+      <tr>
+        <td>Name:</td>
+        <td> <%= @client.name %> </td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td> <%= @client.email %> </td>
+      </tr>
+      </tr>
+        <td>Total Ingress:</td>
+        <td> <%= @client.totalIngress %> </td>
+      </tr>
+      </tr>
+        <td>Sector:</td>
+        <td> <%= @client.sector %> </td>
+      </tr>
+      </tr>
+        <td>Work Years:</td>
+        <td> <%= @client.workYears %> </td>
+      </tr>
+      </tr>
+        <td>Amount:</td>
+        <td> <%= @client.amount %> </td>
+      </tr>
+      </tr>
+        <td>Frecuency of payment:</td>
+        <td> <%= @frecuency %> </td>
+      </tr>
+      </tr>
+        <td>Paytime:</td>
+        <td> <%= @client.paytime %> </td>
+      </tr>
+      </tbody>
+    </table>
+        <h2>
+          According to the data entered by the client, the calculation would be as follows:
+        </h2>
+
+        <p>
+          The client would pay a couta of $<%= @calculation %> <%= @frecuency %> during <%= @client.paytime %> months.
+        </p>
+  </body>
 </html>

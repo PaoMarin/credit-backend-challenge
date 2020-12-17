@@ -1,0 +1,24 @@
+
+Hello Sergio, check the following information that a potential client consulted for a loan request:
+
+<% if @client.frecuency == 1 %>
+  <% @frecuency = "monthly" %>
+<% else %>
+  <% @frecuency = "biweekly" %>
+<% end %>
+
+  Client data:
+
+    Name: <%= @client.name %>
+    Email: <%= @client.email %>
+    Total Ingress: <%= @client.totalIngress %>
+    Sector: <%= @client.sector %>
+    Work Years: <%= @client.workYears %>
+    Amount: <%= @client.amount %>
+    Frecuency of payment: <%= @frecuency %>
+    Paytime: <%= @client.paytime %>
+
+
+  According to the data entered by the client, the calculation would be as follows:
+
+  The client would pay a couta of $<%= @calculation %> <%= @frecuency %> during <%= @client.paytime %> months.
