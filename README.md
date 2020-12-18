@@ -14,6 +14,8 @@ In addition, an email is sent to an authorized user of the client's request.
 
 * Verify that the cors are enabled. In config/initializers/cors. Uncomment the lines of the cors.
 * And uncomment  "gem 'rack-cors'"
+* For purposes of running locally, change in the cors file. The "origin" to the local path of the project. 
+  For example: http: // localhost: 3000
 
 * And then, Run
 > bundle install
