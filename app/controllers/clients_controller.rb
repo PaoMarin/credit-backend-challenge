@@ -31,7 +31,7 @@ class ClientsController < ApplicationController
         ]
       }
     else
-      render json: @client.errors, status: :unprocessable_entity
+      render json: @client.errors
     end
   end
 

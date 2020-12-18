@@ -72,6 +72,9 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   # SMTP settings for gmail
+  host = 'https://app-api-challenge.herokuapp.com'
+  config.action_mailer.default_url_options = { host: host }
+
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
