@@ -5,7 +5,7 @@ class InformationMailer < ApplicationMailer
     client_id = params[:client_id]
     @calculation = params[:calculation]
     @client = Client.find(client_id)
-    email = 'paomg.9614@gmail.com'
+    email = ENV.fetch("EMAIL_BASE")
     mail(to: email, subject: 'Request Credit Information')
   end
 
