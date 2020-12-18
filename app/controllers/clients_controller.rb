@@ -26,7 +26,7 @@ class ClientsController < ApplicationController
             "amount": @client.amount,
             "text": @calculation,
             "frecuency": @client.frecuency,
-            "payTime": @client.paytime,
+            "paytime": @client.paytime,
           }
         ]
       }

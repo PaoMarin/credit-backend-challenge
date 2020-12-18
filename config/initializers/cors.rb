@@ -6,7 +6,7 @@
 # Read more: https://github.com/cyu/rack-cors
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ['http://localhost:8080','https://credit-challenge-6b4d9.web.app' ]
+    origins 'http://localhost:8080'
     resource '*',
              :headers => :any,
              :methods => [:get, :post, :delete, :put, :options]
