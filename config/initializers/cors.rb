@@ -7,7 +7,7 @@
 # IMPORTANT: For purposes of running locally, change the origin to the local path of the project. For example: http://localhost:3000
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'https://credit-challenge-6b4d9.web.app/'
+    origins '*'
     resource '*',
              :headers => :any,
              :methods => [:get, :post, :delete, :put, :options]
